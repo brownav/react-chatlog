@@ -19,7 +19,7 @@ class Chatlog extends Component {
     })
 
     return (
-      <section>
+      <section className='chat-log'>
         {messageComponents}
       </section>
     );

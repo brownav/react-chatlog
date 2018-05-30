@@ -8,11 +8,17 @@ class Message extends Component {
     const body = this.props.body;
     const timeStamp = <Timestamp time={this.props.timeStamp}/>;
 
+    this.isLocal = () => {
+      return this.props.sender === 'Vladimir' ? 'local' : 'remote';
+    };
+
     return (
-      <article>
-        <h3>{sender}</h3>
-        <p>{body}</p>
-        <p>{timeStamp}</p>
+      <article className={`chat-entry ${this.isLocal()}`}>
+        <h3 className='entry-name'>{sender}</h3>
+        <div className='entry-bubble'>
+          <p className='entry-body'>{body}</p>
+          <p className='entry-time'>{timeStamp}</p>
+        </div>
       </article>
     );
   }
