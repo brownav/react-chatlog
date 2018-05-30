@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './Message.css';
-import Timestamp from './Timestamp.css';
+import Timestamp from './Timestamp.js';
 
 class Message extends Component {
   render() {
-    const person = this.props.person;
-    const status = this.props.status;
-    const time = this.props.time;
+    const sender = this.props.sender;
+    const body = this.props.body;
+    const timeStamp = <Timestamp time={this.props.timeStamp}/>;
 
     return (
       <article>
-        <h3>{person}</h3>
-        <p>{status}</p>
-        <p>{time}</p>
+        <h3>{sender}</h3>
+        <p>{body}</p>
+        <p>{timeStamp}</p>
       </article>
     );
   }
