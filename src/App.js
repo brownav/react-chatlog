@@ -3,7 +3,6 @@ import './App.css';
 import chatMessages from './data/messages.json';
 import Chatlog from './components/Chatlog.js'
 
-
 class App extends Component {
   render() {
 

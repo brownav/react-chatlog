@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Chatlog.css';
 import Message from './Message.js';
+import PropTypes from 'prop-types';
 
 class Chatlog extends Component {
   render() {
@@ -25,5 +26,9 @@ class Chatlog extends Component {
     );
   }
 }
+
+Chatlog.propTypes = {
+  messages: PropTypes.array.isRequired,
+};
 
 export default Chatlog;
